@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form example">
+  <title>BFA Sign In</title>
+</head>
+
+<body>
+  <h2 class="content-head is-center">Volunteer Sign In</h2>
+
+   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/style.css">
+
+  <form id="gform" method="POST" class="pure-form pure-form-stacked"
+  action="https://script.google.com/macros/s/AKfycbwIckbptB_Il--RB7YSEMktn0KdyOQe-rESoLTVWfNpeVyHINgC/exec">
+
+    <fieldset class="pure-group">
+      <label for="name">Name: </label>
+      <input id="name" name="name" placeholder="What your Mom calls you" />
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="email"><em>Your</em> Email Address:</label>
+      <input id="email" name="email" type="email" value=""
+      required placeholder="your.name@email.com"/>
+      <span id="email-invalid" style="display:none">
+        Must be a valid email address</span>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="phone">Phone #: </label>
+      <input id="phone" name="phone" placeholder="Ex: 555-867-5309 " />
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="organization">Organization: </label>
+      <input id="organization" name="organization" placeholder="Books For Africa" />
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="date">Today's Date: </label>
+      <input id="date" name="date" placeholder="Ex. 2/10/1999 " />
+    </fieldset>
+
+    <button class="button-success pure-button button-xlarge">
+      <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+
+  </form>
+
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for volunteering!
+      We hope to see you soon!</h2>
+    <h3>Click <a href="https://www.booksforafica.com">HERE</a> to refresh the page!</h3>
+  </div>
+
+  <script data-cfasync="false" type="text/javascript"
+ src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+
+</body>
+</html>
