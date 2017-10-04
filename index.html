@@ -20,7 +20,7 @@
 
     <fieldset class="pure-group">
       <label for="name">Name: </label>
-      <input id="name" name="name" placeholder="What your Mom calls you" />
+      <input id="name" name="name" placeholder="What Your Mom Calls You" />
     </fieldset>
 
     <fieldset class="pure-group">
@@ -38,12 +38,14 @@
 
     <fieldset class="pure-group">
       <label for="organization">Organization: </label>
-      <input id="organization" name="organization" placeholder="Books For Africa" />
+      <input id="organization" name="organization" placeholder="Who You Work For" />
     </fieldset>
 
     <fieldset class="pure-group">
       <label for="date">Today's Date: </label>
-      <input id="date" name="date" placeholder="Ex. 2/10/1999 " />
+      <input id="date" name="date" required placeholder="2/10/1999" />
+      <span id="date-invalid" style="display:none">
+        Must be a valid date</span>
     </fieldset>
 
     <fieldset class="pure-group">
